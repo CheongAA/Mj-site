@@ -1,25 +1,41 @@
 import React, { Component } from 'react';
+import '../css/home.css';
 
 export default class Home extends Component {
     render() {
         return (
             <div>
-                <div className="jumbotron p-4 p-md-5 text-white rounded bg-dark">
-                    <div className="col-md-6 px-0">
-                        <h1 className="display-4 font-italic">반갑습니다!</h1>
-                        <p className="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
-                        <p className="lead mb-0">사이트를 자유롭게 이용해보세요.</p>
+                <div id="carouselExampleIndicators" className="carousel slide mb-5 w-100 mx-auto" data-ride="carousel">
+                    <ol className="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    </ol>
+                    <div className="carousel-inner">
+                        <div className="carousel-item active">
+                            <img src="http://img.hani.co.kr/imgdb/resize/2017/1216/151330195958_20171216.JPG" className="d-block w-100 " alt="..." />
+                        </div>
+                        <div className="carousel-item">
+                            <img src="http://img.hani.co.kr/imgdb/resize/2018/0904/153594312002_20180904.PNG" className="d-block w-100 " alt="..." />
+                        </div>
                     </div>
+                    <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="sr-only">Previous</span>
+                    </a>
+                    <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="sr-only">Next</span>
+                    </a>
                 </div>
                 <div className="row mb-2">
                     <div className="col-md-6">
                         <div className="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                            <div className="col p-4 d-flex flex-column position-static">
-                                <strong className="d-inline-block mb-2 text-primary">World</strong>
-                                <h3 className="mb-0">Featured post</h3>
-                                <div className="mb-1 text-muted">Nov 12</div>
-                                <p className="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                                {/* <a href="#" className="stretched-link">Continue reading</a> */}
+                            <div className="col p-4 d-flex flex-column position-static ">
+                                <strong className="d-inline-block mb-2 text-primary">행사</strong>
+                                <h3 className="mb-0">간식행사</h3>
+                                <div className="mb-3 text-muted">2019년 11월 23일</div>
+                                <p className="card-text mb-auto ">
+                                    샐러디와 함께 간식행사를 진행합니다. 많은 학우들의 관심바랍니다.</p>
                             </div>
                             <div className="col-auto d-none d-lg-block">
                                 <svg className="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -29,11 +45,10 @@ export default class Home extends Component {
                     <div className="col-md-6">
                         <div className="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                             <div className="col p-4 d-flex flex-column position-static">
-                                <strong className="d-inline-block mb-2 text-success">Design</strong>
-                                <h3 className="mb-0">Post title</h3>
-                                <div className="mb-1 text-muted">Nov 11</div>
-                                <p className="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                                {/* <a href="#" className="stretched-link">Continue reading</a> */}
+                                <strong className="d-inline-block mb-2 text-success">공모전</strong>
+                                <h3 className="mb-0">스마트 캠퍼스 공모전</h3>
+                                <div className="mb-3 text-muted">2019년 11월 6 ~ 2019년 11월 21일</div>
+                                <p className="mb-auto">스마트 캠퍼스라는 주제와 함께 공모전을 진행합니다. 많은 참여 바랍니다.</p>
                             </div>
                             <div className="col-auto d-none d-lg-block">
                                 <svg className="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
