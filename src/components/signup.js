@@ -68,7 +68,7 @@ export default class SignUp extends React.Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Studenr Number : </label>
+                        <label>Student Number : </label>
                         <input type="text"
                             required
                             className="form-control"
@@ -83,8 +83,9 @@ export default class SignUp extends React.Component {
             );
         } else {
             return (
-                <div>
-                    <h3>환영합니다.</h3>
+                <div className="m-5">
+                    <h3 className="text-center">환영합니다.</h3>
+                    <p className="text-center">사이트를 즐겨보세요.</p>
                 </div>
             );
         }

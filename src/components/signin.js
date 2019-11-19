@@ -21,8 +21,8 @@ export default class Signin extends React.Component {
         if (this.props.user === '') {
             return (
                 <form onSubmit={this.onSubmit}>
-                    <div className="form-group">
-                        <label>ID: </label>
+                    <div className="form-group col-4 mx-auto">
+                        <label>ID </label>
                         <input type="text"
                             required
                             className="form-control"
@@ -30,8 +30,8 @@ export default class Signin extends React.Component {
                             onChange={this.onChangeUserId}
                         />
                     </div>
-                    <div className="form-group">
-                        <label>Password: </label>
+                    <div className="form-group col-4 mx-auto">
+                        <label>Password </label>
                         <input type="password"
                             required
                             className="form-control"
@@ -46,8 +46,9 @@ export default class Signin extends React.Component {
             );
         } else {
             return (
-                <div>
-                    <h3>환영합니다.</h3>
+                <div className="m-5">
+                    <h3 className="text-center">환영합니다.</h3>
+                    <p className="text-center">사이트를 즐겨보세요.</p>
                 </div>
             );
         }
@@ -86,6 +87,7 @@ export default class Signin extends React.Component {
     render() {
         return (
             <div>
+                <h3 className="text-center">로그인</h3>
                 {this.checkLogin()}
             </div>
         )

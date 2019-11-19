@@ -2,8 +2,9 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-const boardsRouter = require('./routes/boards');
 const usersRouter = require('./routes/users');
+const boardsRouter = require('./routes/boards');
+const noticesRouter = require('./routes/notices');
 
 
 require('dotenv').config();
@@ -22,8 +23,10 @@ connection.once('open', () => {
     console.log("MongoDB database connection established successfully");
 })
 
-app.use('/boards', boardsRouter);
 app.use('/users', usersRouter);
+app.use('/boards', boardsRouter);
+app.use('/notices', noticesRouter);
+
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);

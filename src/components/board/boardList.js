@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
@@ -7,8 +8,8 @@ class List extends React.Component {
         if (this.props.user.userid === this.props.list.userid) {
             return (
                 <td>
-                    <a className="btn btn-secondary m-1" href={"/edit/" + this.props.list._id}>edit</a>
-                    <button className="btn btn-danger m-1" onClick={() => { this.props.deleteList(this.props.list._id) }}>delete</button>
+                    <a className="btn btn-outline-info btn-sm mr-1" href={"/edit/" + this.props.list._id}>edit</a>
+                    <button className="btn btn-outline-danger btn-sm" onClick={() => { this.props.deleteList(this.props.list._id) }}>delete</button>
                 </td>
             );
         }
@@ -62,8 +63,8 @@ export default class Lists extends Component {
     render() {
         return (
             <div>
-                <h3>자유게시판</h3>
-                <table className="table">
+                <h3 className="m-5">자유게시판</h3>
+                <table className="table text-center">
                     <thead className="thead-light">
                         <tr>
                             <th>제목</th>
@@ -77,9 +78,26 @@ export default class Lists extends Component {
                         {this.list()}
                     </tbody>
                 </table>
-                <div className="row text-right">
-                    <a className="btn btn-secondary m-1" href="/write">글쓰기</a>
+                <div className="row justify-content-end">
+                    <a className="btn btn-secondary m-5 " href="/write">글쓰기</a>
                 </div>
+                <nav aria-label="Page navigation example ">
+                    <ul className="pagination justify-content-center">
+                        <li className="page-item">
+                            <Link className="page-link" to="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </Link>
+                        </li>
+                        <li className="page-item"><Link className="page-link" to="#">1</Link></li>
+                        <li className="page-item"><Link className="page-link" to="#">2</Link></li>
+                        <li className="page-item"><Link className="page-link" to="#">3</Link></li>
+                        <li className="page-item">
+                            <Link className="page-link" to="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </Link>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         )
     }

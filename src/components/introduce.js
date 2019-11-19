@@ -5,7 +5,7 @@ import '../css/introduce.css';
 export default class Introduce extends React.Component {
     render() {
         return (
-            <div classNamw="container ">
+            <div className="container ">
                 <h3 className="p-3 font-weight-bold text-center">학과 소개 및 특성</h3>
                 <hr />
                 <div className="blockquote border p-3">

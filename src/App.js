@@ -5,13 +5,21 @@ import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-d
 import './css/global.css'
 
 import Navbar from './components/navbar';
+
 import Home from './components/home';
-import Introduce from './components/introduce'
-import Lists from './components/lists';
-import Board from './components/board';
-import EditBoard from './components/editBoard';
+import Introduce from './components/introduce';
+
+import NoticeList from './components/notice/noticeList';
+import NoticeDetail from './components/notice/noticeDetail';
+import AddNotice from './components/notice/addNotice';
+
+import BoardList from './components/board/boardList';
+import AddBoard from './components/board/addBoard';
+import EditBoard from './components/board/editBoard';
+
 import Signup from './components/signup';
 import Signin from './components/signin';
+
 import Footer from './components/footer';
 
 class App extends React.Component {
@@ -61,8 +69,11 @@ class App extends React.Component {
             <Route path="/signup" component={() => <Signup login={this.login} user={this.state.user} />} />
             <Route path="/signin" component={() => <Signin login={this.login} user={this.state.user} />} />
             <Route path="/introduce" component={Introduce} />
-            <Route path="/list" component={() => <Lists user={this.state.user} />} />
-            <Route path="/write" component={() => <Board user={this.state.user} />} />
+            <Route path="/notice" exact component={() => <NoticeList user={this.state.user} />} />
+            <Route path="/notice/add" component={() => <AddNotice user={this.state.user} />} />
+            <Route path="/notice/:id" component={NoticeDetail} />
+            <Route path="/board" component={() => <BoardList user={this.state.user} />} />
+            <Route path="/write" component={() => <AddBoard user={this.state.user} />} />
             <Route path="/edit/:id" component={EditBoard} />
             <Redirect from="*" to="/" />
           </Switch>
