@@ -51,10 +51,10 @@ export default class Navbar extends Component {
                         <Link to="/introduce" className="p-2 text-muted">소개</Link>
                         <Link to="/" className="p-2 text-muted">공지사항</Link>
                         <Link to="/" className="p-2 text-muted">Q&amp;A</Link>
+                        <Link to="/list" className="p-2 text-muted">자유게시판</Link>
                         <Link to="/" className="p-2 text-muted">공모전</Link>
                         <Link to="/" className="p-2 text-muted">스터디</Link>
-                        <Link to="/" className="p-2 text-muted">취업상담</Link>
-                        <Link to="/create" className="p-2 text-muted">자유게시판</Link>
+                        <Link to="/" className="p-2 text-muted">취업</Link>
                         <Link to="/" className="p-2 text-muted">장터</Link>
                     </nav>
                     <hr />
