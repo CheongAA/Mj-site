@@ -41,10 +41,11 @@ export default class Board extends React.Component {
             date: this.state.date
         }
 
-        axios.post('https://nameless-citadel-71188.herokuapp.com:5000/boards/add', write)
-            .then(res => console.log(res.data));
+        axios.post('/boards/add', write)
+            .then(res => console.log(res.data))
+            .catch(err => console.log(err));
 
-        window.location = '/list';
+        window.location = '/boards';
     }
 
     checkUser() {

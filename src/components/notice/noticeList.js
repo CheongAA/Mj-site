@@ -6,7 +6,7 @@ class Notice extends React.Component {
     render() {
         return (
             <tr >
-                <td ><Link to={"/notice/" + this.props.notice._id} className="text-dark">{this.props.notice.title}</Link></td>
+                <td ><Link to={"/notices/" + this.props.notice._id} className="text-dark">{this.props.notice.title}</Link></td>
                 <td >{this.props.notice.userid}</td>
                 <td >{this.props.notice.date.substring(0, 10)}</td>
             </tr>
@@ -24,7 +24,7 @@ export default class NoticeList extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://nameless-citadel-71188.herokuapp.com:5000/notices')
+        axios.get('/notices')
             .then(res => {
                 this.setState({ notices: res.data })
             })
@@ -56,7 +56,7 @@ export default class NoticeList extends Component {
                     </tbody>
                 </table>
                 <div className="row justify-content-end">
-                    {this.props.user.userid === 'admin' ? <Link className="btn btn-secondary m-1" to="/notice/add">글쓰기</Link> : ''}
+                    {this.props.user.userid === 'admin' ? <Link className="btn btn-secondary m-1" to="/notices/add">글쓰기</Link> : ''}
                 </div>
                 <nav aria-label="Page navigation example ">
                     <ul className="pagination justify-content-center">

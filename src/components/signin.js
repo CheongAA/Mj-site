@@ -73,7 +73,7 @@ export default class Signin extends React.Component {
             userid: this.state.userid,
             password: this.state.password
         }
-        axios.post('https://nameless-citadel-71188.herokuapp.com:5000/users/login', user)
+        axios.post('/users/login', user)
             .then(res => this.props.login(res.data))
             .catch(err => console.log(err));
 

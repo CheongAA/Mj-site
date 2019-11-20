@@ -52,8 +52,8 @@ export default class Navbar extends Component {
                         <Link to="/" className="p-2 text-muted">홈</Link>
                         <Link to="/introduce" className="p-2 text-muted">소개</Link>
                         <Link to="/news" className="p-2 text-muted">뉴스</Link>
-                        <Link to="/notice" className="p-2 text-muted">공지사항</Link>
-                        <Link to="/board" className="p-2 text-muted">자유게시판</Link>
+                        <Link to="/notices" className="p-2 text-muted">공지사항</Link>
+                        <Link to="/boards" className="p-2 text-muted">자유게시판</Link>
                         <Link to="/" className="p-2 text-muted">Q&amp;A</Link>
                         <Link to="/" className="p-2 text-muted">공모전</Link>
                         <Link to="/" className="p-2 text-muted">스터디</Link>

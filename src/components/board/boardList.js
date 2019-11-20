@@ -8,7 +8,7 @@ class List extends React.Component {
         if (this.props.user.userid === this.props.list.userid) {
             return (
                 <td>
-                    <a className="btn btn-outline-info btn-sm mr-1" href={"/edit/" + this.props.list._id}>edit</a>
+                    <a className="btn btn-outline-info btn-sm mr-1" href={"/boards/edit/" + this.props.list._id}>edit</a>
                     <button className="btn btn-outline-danger btn-sm" onClick={() => { this.props.deleteList(this.props.list._id) }}>delete</button>
                 </td>
             );
@@ -36,7 +36,7 @@ export default class Lists extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://nameless-citadel-71188.herokuapp.com/boards')
+        axios.get('/boards')
             .then(res => {
                 this.setState({ lists: res.data })
             })
@@ -46,7 +46,7 @@ export default class Lists extends Component {
     }
 
     deleteList(id) {
-        axios.delete('https://nameless-citadel-71188.herokuapp.com:5000/boards/' + id)
+        axios.delete('/boards/' + id)
             .then(response => { console.log(response.data) });
 
         this.setState({
@@ -79,7 +79,7 @@ export default class Lists extends Component {
                     </tbody>
                 </table>
                 <div className="row justify-content-end">
-                    <a className="btn btn-secondary m-5 " href="/write">글쓰기</a>
+                    <a className="btn btn-secondary m-5 " href="/boards/add">글쓰기</a>
                 </div>
                 <nav aria-label="Page navigation example ">
                     <ul className="pagination justify-content-center">
