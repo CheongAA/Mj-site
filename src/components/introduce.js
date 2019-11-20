@@ -9,7 +9,7 @@ export default class Introduce extends React.Component {
                 <h3 className="p-3 font-weight-bold text-center">소개 및 특성</h3>
                 <hr />
                 <div className="blockquote border p-3">
-                    <h4 className="p-3">ICT융합대학 소개</h4>
+                    <h4 className="p-3">ICT융합대학</h4>
                     <p className="font-weight-lighter p-3">
                         ICT융합대학은 인문학적/논리적 소양과 과학기술 기반의 상상력을 갖춘 창의융합인재를
                         양성하기 위하여 2016학년도에 설립된 새로운 최첨단의 단과대학이다.
