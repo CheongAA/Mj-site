@@ -73,7 +73,7 @@ export default class Signin extends React.Component {
             userid: this.state.userid,
             password: this.state.password
         }
-        axios.post('/users/login', user)
+        axios.post(process.env.API_URI + '/users/login', user)
             .then(res => this.props.login(res.data))
             .catch(err => console.log(err));
 

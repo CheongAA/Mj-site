@@ -36,7 +36,7 @@ export default class Lists extends Component {
     }
 
     componentDidMount() {
-        axios.get('/boards')
+        axios.get(process.env.API_URI + '/boards')
             .then(res => {
                 this.setState({ lists: res.data })
             })
@@ -46,7 +46,7 @@ export default class Lists extends Component {
     }
 
     deleteList(id) {
-        axios.delete('/boards/' + id)
+        axios.delete(process.env.API_URI + '/boards/' + id)
             .then(response => { console.log(response.data) });
 
         this.setState({

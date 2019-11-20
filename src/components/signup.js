@@ -130,7 +130,7 @@ export default class SignUp extends React.Component {
         }
 
         console.log(user)
-        axios.post('/users/add', user)
+        axios.post(process.env.API_URI + '/users/add', user)
             .then(res => this.props.login(user))
             .catch(err => console.log(err));
 

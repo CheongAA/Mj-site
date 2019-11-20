@@ -41,7 +41,7 @@ export default class Notice extends React.Component {
             date: this.state.date
         }
 
-        axios.post('/notices/add', notice)
+        axios.post(process.env.API_URI + '/notices/add', notice)
             .then(res => console.log(res.data))
             .catch(err => console.log(err));
 

@@ -41,7 +41,7 @@ export default class Board extends React.Component {
             date: this.state.date
         }
 
-        axios.post('/boards/add', write)
+        axios.post(process.env.API_URI + '/boards/add', write)
             .then(res => console.log(res.data))
             .catch(err => console.log(err));
 

@@ -17,7 +17,7 @@ export default class NoticeDetail extends Component {
     }
 
     componentDidMount() {
-        axios.get('/notices/' + this.props.match.params.id)
+        axios.get(process.env.API_URI + '/notices/' + this.props.match.params.id)
             .then(response => {
                 this.setState({
                     title: response.data.title,
