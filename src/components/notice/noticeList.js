@@ -6,7 +6,7 @@ class Notice extends React.Component {
     render() {
         return (
             <tr >
-                <td ><Link to={"/notice/" + this.props.notice._id} >{this.props.notice.title}</Link></td>
+                <td ><Link to={"/notice/" + this.props.notice._id} className="text-dark">{this.props.notice.title}</Link></td>
                 <td >{this.props.notice.userid}</td>
                 <td >{this.props.notice.date.substring(0, 10)}</td>
             </tr>

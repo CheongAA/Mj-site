@@ -8,7 +8,7 @@ import Navbar from './components/navbar';
 
 import Home from './components/home';
 import Introduce from './components/introduce';
-
+import NewsList from './components/news/newsList';
 import NoticeList from './components/notice/noticeList';
 import NoticeDetail from './components/notice/noticeDetail';
 import AddNotice from './components/notice/addNotice';
@@ -69,6 +69,7 @@ class App extends React.Component {
             <Route path="/signup" component={() => <Signup login={this.login} user={this.state.user} />} />
             <Route path="/signin" component={() => <Signin login={this.login} user={this.state.user} />} />
             <Route path="/introduce" component={Introduce} />
+            <Route path="/news" component={NewsList} />
             <Route path="/notice" exact component={() => <NoticeList user={this.state.user} />} />
             <Route path="/notice/add" component={() => <AddNotice user={this.state.user} />} />
             <Route path="/notice/:id" component={NoticeDetail} />

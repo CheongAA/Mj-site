@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../css/home.css';
+import smart from '../images/smart.jpg';
 
 export default class Home extends Component {
     render() {
@@ -38,7 +39,7 @@ export default class Home extends Component {
                                     샐러디와 함께 간식행사를 진행합니다. 많은 학우들의 관심바랍니다.</p>
                             </div>
                             <div className="col-auto d-none d-lg-block">
-                                <svg className="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                                <img width="200" height="250" src="http://saladykorea.com/favicon.ico" className="bd-placeholder-img" alt=""></img>
                             </div>
                         </div>
                     </div>
@@ -51,12 +52,12 @@ export default class Home extends Component {
                                 <p className="mb-auto">스마트 캠퍼스라는 주제와 함께 공모전을 진행합니다. 많은 참여 바랍니다.</p>
                             </div>
                             <div className="col-auto d-none d-lg-block">
-                                <svg className="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                                <img width="200" height="250" src={smart} className="bd-placeholder-img" alt=""></img>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         );
     }
 }
