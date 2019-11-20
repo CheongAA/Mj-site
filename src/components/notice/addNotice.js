@@ -41,7 +41,7 @@ export default class Notice extends React.Component {
             date: this.state.date
         }
 
-        axios.post('https://nameless-citadel-71188.herokuapp.com/notices/add', notice)
+        axios.post('https://nameless-citadel-71188.herokuapp.com:5000/notices/add', notice)
             .then(res => console.log(res.data));
 
         window.location = '/notice';

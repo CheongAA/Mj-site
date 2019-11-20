@@ -24,7 +24,7 @@ export default class NoticeList extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://nameless-citadel-71188.herokuapp.com/notices')
+        axios.get('https://nameless-citadel-71188.herokuapp.com:5000/notices')
             .then(res => {
                 this.setState({ notices: res.data })
             })

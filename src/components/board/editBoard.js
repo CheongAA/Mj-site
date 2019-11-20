@@ -50,7 +50,7 @@ export default class EditBoard extends Component {
             description: this.state.description,
             date: this.state.date
         }
-        axios.post('https://nameless-citadel-71188.herokuapp.com/update/' + this.props.match.params.id, board)
+        axios.post('https://nameless-citadel-71188.herokuapp.com:5000/update/' + this.props.match.params.id, board)
             .then(res => console.log(res.data));
 
         window.location = '/';

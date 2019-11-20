@@ -46,7 +46,7 @@ export default class Lists extends Component {
     }
 
     deleteList(id) {
-        axios.delete('https://nameless-citadel-71188.herokuapp.com/boards/' + id)
+        axios.delete('https://nameless-citadel-71188.herokuapp.com:5000/boards/' + id)
             .then(response => { console.log(response.data) });
 
         this.setState({
