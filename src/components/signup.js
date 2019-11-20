@@ -130,7 +130,7 @@ export default class SignUp extends React.Component {
         }
 
         console.log(user)
-        axios.post('http://localhost:5000/users/add', user)
+        axios.post('https://nameless-citadel-71188.herokuapp.com/users/add', user)
             .then(res => this.props.login(user))
             .catch(err => console.log(err));
 

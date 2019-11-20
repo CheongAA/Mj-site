@@ -36,7 +36,7 @@ export default class Lists extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/boards')
+        axios.get('https://nameless-citadel-71188.herokuapp.com/boards')
             .then(res => {
                 this.setState({ lists: res.data })
             })
@@ -46,7 +46,7 @@ export default class Lists extends Component {
     }
 
     deleteList(id) {
-        axios.delete('http://localhost:5000/boards/' + id)
+        axios.delete('https://nameless-citadel-71188.herokuapp.com/boards/' + id)
             .then(response => { console.log(response.data) });
 
         this.setState({

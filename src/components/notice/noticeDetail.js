@@ -17,7 +17,7 @@ export default class NoticeDetail extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/notices/' + this.props.match.params.id)
+        axios.get('https://nameless-citadel-71188.herokuapp.com/' + this.props.match.params.id)
             .then(response => {
                 this.setState({
                     title: response.data.title,
