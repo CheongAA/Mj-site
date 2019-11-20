@@ -24,7 +24,7 @@ export default class NoticeList extends Component {
     }
 
     componentDidMount() {
-        axios.get('/notices')
+        axios.get(`${process.env.URI}/notices`)
             .then(res => {
                 this.setState({ notices: res.data })
             })

@@ -2,7 +2,6 @@
   "name": "mern-mj-site",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://agile-forest-33603.herokuapp.com/",
   "devServer": {
     "disableHostCheck": true
   },
