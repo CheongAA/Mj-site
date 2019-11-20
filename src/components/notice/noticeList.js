@@ -24,7 +24,7 @@ export default class NoticeList extends Component {
     }
 
     componentDidMount() {
-        axios.get(process.env.API_URI + '/notices')
+        axios.get('https://agile-forest-33603.herokuapp.com/notices')
             .then(res => {
                 this.setState({ notices: res.data })
             })

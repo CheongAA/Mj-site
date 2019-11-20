@@ -41,7 +41,7 @@ export default class Board extends React.Component {
             date: this.state.date
         }
 
-        axios.post(process.env.API_URI + '/boards/add', write)
+        axios.post('https://agile-forest-33603.herokuapp.com/boards/add', write)
             .then(res => console.log(res.data))
             .catch(err => console.log(err));
 

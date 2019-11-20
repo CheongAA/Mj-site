@@ -18,7 +18,7 @@ export default class EditBoard extends Component {
     }
 
     componentDidMount() {
-        axios.get(process.env.API_URI + '/boards/' + this.props.match.params.id)
+        axios.get('https://agile-forest-33603.herokuapp.com/boards/' + this.props.match.params.id)
             .then(response => {
                 this.setState({
                     userid: response.data.userid,
@@ -50,7 +50,7 @@ export default class EditBoard extends Component {
             description: this.state.description,
             date: this.state.date
         }
-        axios.post(process.env.API_URI + '/update/' + this.props.match.params.id, board)
+        axios.post('https://agile-forest-33603.herokuapp.com/update/' + this.props.match.params.id, board)
             .then(res => console.log(res.data))
             .catch(err => err);
 

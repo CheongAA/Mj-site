@@ -41,7 +41,7 @@ export default class Notice extends React.Component {
             date: this.state.date
         }
 
-        axios.post(process.env.API_URI + '/notices/add', notice)
+        axios.post('https://agile-forest-33603.herokuapp.com/notices/add', notice)
             .then(res => console.log(res.data))
             .catch(err => console.log(err));
 

@@ -36,7 +36,7 @@ export default class Lists extends Component {
     }
 
     componentDidMount() {
-        axios.get(process.env.API_URI + '/boards')
+        axios.get('https://agile-forest-33603.herokuapp.com/boards')
             .then(res => {
                 this.setState({ lists: res.data })
             })
@@ -46,7 +46,7 @@ export default class Lists extends Component {
     }
 
     deleteList(id) {
-        axios.delete(process.env.API_URI + '/boards/' + id)
+        axios.delete('https://agile-forest-33603.herokuapp.com/boards/' + id)
             .then(response => { console.log(response.data) });
 
         this.setState({
